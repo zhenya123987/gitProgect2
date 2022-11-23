@@ -27,13 +27,13 @@ class Example(QWidget):
         self.qp.end()
 
     def draw_circle(self):
-        x, y, r = random.randint(1, 500), random.randint(1, 500), random.randint(10, 200)
+        x, y,  = random.randint(1, 500), random.randint(1, 500)
         self.qp.setBrush(QColor(255, 255, 0))
-        self.qp.drawEllipse(x, y, r, r)
+        self.qp.drawEllipse(x, y, 100, 100)
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Example()
     ex.show()
-    sys.exit(app.exec())  # second third fourth fifth sixth seventh
+    sys.exit(app.exec())  # no radius
